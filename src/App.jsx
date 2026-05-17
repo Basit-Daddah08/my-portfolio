@@ -76,10 +76,10 @@ export default function App() {
             },
             {
               title: "Figma to Code",
-              desc: "Took a full Figma design and rebuilt it pixel-perfect in React.",
-              tags: ["Figma", "React"],
-              status: "Coming soon",
-              link: null
+              desc: "A pricing page — designed first, then built pixel-perfect in React and Tailwind.",
+              tags: ["Figma", "React", "Tailwind"],
+              status: "Live",
+              link: "https://figma-to-code-lemon.vercel.app"
             }
           ].map(project => (
             <div key={project.title} className="border border-zinc-800 rounded-2xl p-6 hover:border-zinc-600 transition flex flex-col justify-between">
@@ -95,11 +95,9 @@ export default function App() {
                   ))}
                 </div>
               </div>
-              {project.link && (
-                <a href={project.link} target="_blank" rel="noreferrer" className="text-xs text-zinc-400 hover:text-white transition mt-4 block">
-                  View live →
-                </a>
-              )}
+              <a href={project.link} target="_blank" rel="noreferrer" className="text-xs text-zinc-400 hover:text-white transition mt-4 block">
+                View live →
+              </a>
             </div>
           ))}
         </div>
