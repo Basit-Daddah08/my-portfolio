@@ -64,32 +64,42 @@ export default function App() {
               title: "Portfolio Site",
               desc: "This site — designed in Figma and built from scratch in React and Tailwind.",
               tags: ["React", "Tailwind"],
-              status: "Live"
+              status: "Live",
+              link: "https://my-portfolio-theta-pearl-60.vercel.app"
             },
             {
               title: "Component Library",
               desc: "A growing set of reusable UI components — buttons, cards, modals, forms.",
-              tags: ["React", "TypeScript"],
-              status: "In progress"
+              tags: ["React", "Tailwind"],
+              status: "Live",
+              link: "https://ui-components-five-iota.vercel.app"
             },
             {
               title: "Figma to Code",
               desc: "Took a full Figma design and rebuilt it pixel-perfect in React.",
               tags: ["Figma", "React"],
-              status: "Coming soon"
+              status: "Coming soon",
+              link: null
             }
           ].map(project => (
-            <div key={project.title} className="border border-zinc-800 rounded-2xl p-6 hover:border-zinc-600 transition">
-              <div className="flex justify-between items-start mb-4">
-                <h3 className="font-semibold text-base">{project.title}</h3>
-                <span className="text-xs text-zinc-500">{project.status}</span>
+            <div key={project.title} className="border border-zinc-800 rounded-2xl p-6 hover:border-zinc-600 transition flex flex-col justify-between">
+              <div>
+                <div className="flex justify-between items-start mb-4">
+                  <h3 className="font-semibold text-base">{project.title}</h3>
+                  <span className="text-xs text-zinc-500">{project.status}</span>
+                </div>
+                <p className="text-zinc-400 text-sm leading-relaxed mb-4">{project.desc}</p>
+                <div className="flex gap-2 flex-wrap">
+                  {project.tags.map(tag => (
+                    <span key={tag} className="text-xs bg-zinc-800 text-zinc-400 px-2 py-1 rounded-md">{tag}</span>
+                  ))}
+                </div>
               </div>
-              <p className="text-zinc-400 text-sm leading-relaxed mb-4">{project.desc}</p>
-              <div className="flex gap-2">
-                {project.tags.map(tag => (
-                  <span key={tag} className="text-xs bg-zinc-800 text-zinc-400 px-2 py-1 rounded-md">{tag}</span>
-                ))}
-              </div>
+              {project.link && (
+                <a href={project.link} target="_blank" rel="noreferrer" className="text-xs text-zinc-400 hover:text-white transition mt-4 block">
+                  View live →
+                </a>
+              )}
             </div>
           ))}
         </div>
