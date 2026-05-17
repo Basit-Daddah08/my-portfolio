@@ -1,3 +1,7 @@
+A personal portfolio site built with React and Tailwind CSS.
+Includes a hero section, about page, projects grid, and contact section.
+Deployed live on Vercel.
+
 <img width="850" height="5980" alt="my-portfolio-theta-pearl-60 vercel app_" src="https://github.com/user-attachments/assets/eef7fedb-f1a0-4724-96f9-6b08f55c8124" />
 
 # React + Vite
