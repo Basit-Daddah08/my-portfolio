@@ -1,3 +1,5 @@
+<img width="850" height="5980" alt="my-portfolio-theta-pearl-60 vercel app_" src="https://github.com/user-attachments/assets/eef7fedb-f1a0-4724-96f9-6b08f55c8124" />
+
 # React + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
